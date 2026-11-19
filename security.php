@@ -35,10 +35,6 @@ function csrf_field() {
 }
 
 function csrf_check() {
-    // Lewati CSRF check jika request berasal dari Web Service / REST API
-    if (defined('IS_API') && IS_API) return true;
-    if (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], '/api/') !== false) return true;
-
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') return true;
     $tok = $_POST['_csrf'] ?? '';
     $session_tok = $_SESSION['_csrf'] ?? '';

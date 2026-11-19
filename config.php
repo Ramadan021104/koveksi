@@ -11,7 +11,7 @@ date_default_timezone_set('Asia/Jakarta');
 // BASE URL — sesuaikan dengan domain InfinityFree Anda
 // Contoh: 'https://indrakonveksi.rf.gd/' atau 'https://namadomainanda.rf.gd/'
 // PENTING: harus diakhiri dengan / (slash)
-define('BASE_URL', 'https://SUBDOMAIN-ANDA.rf.gd/');  // ← GANTI dengan URL domain InfinityFree
+define('BASE_URL', 'https://konveksi.infinityfree.me/');  // ← GANTI dengan URL domain InfinityFree
 
 // Upload path (untuk gambar produk & file desain custom order)
 define('UPLOAD_PATH', __DIR__ . '/../uploads/');
@@ -34,10 +34,6 @@ try {
     $cek = $pdo->query("SHOW COLUMNS FROM users LIKE 'google_id'")->fetch();
     if (!$cek) {
         $pdo->exec("ALTER TABLE users ADD COLUMN google_id VARCHAR(100) NULL UNIQUE AFTER alamat");
-    }
-    $cekToken = $pdo->query("SHOW COLUMNS FROM users LIKE 'api_token'")->fetch();
-    if (!$cekToken) {
-        $pdo->exec("ALTER TABLE users ADD COLUMN api_token VARCHAR(100) NULL UNIQUE AFTER google_id");
     }
     $pdo->exec("ALTER TABLE users MODIFY COLUMN password VARCHAR(255) NULL");
     $pdo->exec("CREATE TABLE IF NOT EXISTS produk_gambar (
