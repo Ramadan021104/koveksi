@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Laporan Proyek Indra Konveksi</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Laporan Proyek Indra Konveksi</h1>
+</header>
+<h1 id="laporan-project">LAPORAN PROJECT</h1>
+<h1 id="website-katalog-custom-order-indra-konveksi">WEBSITE KATALOG
+&amp; CUSTOM ORDER INDRA KONVEKSI</h1>
+<p><strong>Disusun untuk memenuhi tugas mata kuliah Pemrograman Web /
+Rekayasa Perangkat Lunak</strong></p>
+<hr />
+<pre><code>Nama        : ___________________________
+NIM         : ___________________________
+Kelas       : ___________________________
+Dosen       : ___________________________
+Mata Kuliah : ___________________________</code></pre>
+<hr />
+<p><strong>PROGRAM STUDI TEKNIK INFORMATIKA</strong> <strong>FAKULTAS
+…………………</strong> <strong>UNIVERSITAS …………………</strong> <strong>TAHUN
+2026</strong></p>
+<h2 id="kata-pengantar">KATA PENGANTAR</h2>
+<p>Puji syukur kehadirat Tuhan Yang Maha Esa atas berkat dan rahmat-Nya
+sehingga penyusun dapat menyelesaikan project akhir berjudul
+<strong>“Website Katalog &amp; Custom Order Indra Konveksi”</strong> ini
+dengan baik dan tepat waktu.</p>
+<p>Project ini disusun sebagai pemenuhan tugas mata kuliah Pemrograman
+Web, sekaligus penerapan ilmu yang telah dipelajari di bangku kuliah
+meliputi: PHP, MySQL, HTML, CSS, JavaScript, dan Bootstrap.</p>
+<p>Penyusun menyadari laporan ini masih jauh dari sempurna. Kritik dan
+saran yang membangun sangat diharapkan untuk perbaikan di masa
+mendatang. Semoga project ini bermanfaat bagi pembaca dan dapat menjadi
+referensi bagi pengembangan website konveksi lainnya.</p>
+<p>Bengkulu, ……………………. 2026</p>
+<p>Penyusun,</p>
+<p>( _________________________ )</p>
+<h2 id="daftar-isi">DAFTAR ISI</h2>
+<ul>
+<li>KATA PENGANTAR</li>
+<li>DAFTAR ISI</li>
+<li><strong>BAB I PENDAHULUAN</strong>
+<ul>
+<li>1.1 Latar Belakang</li>
+<li>1.2 Rumusan Masalah</li>
+<li>1.3 Tujuan</li>
+<li>1.4 Manfaat</li>
+<li>1.5 Batasan Masalah</li>
+</ul></li>
+<li><strong>BAB II LANDASAN TEORI</strong>
+<ul>
+<li>2.1 Website</li>
+<li>2.2 PHP</li>
+<li>2.3 MySQL</li>
+<li>2.4 HTML, CSS, JavaScript</li>
+<li>2.5 Bootstrap 5</li>
+<li>2.6 XAMPP</li>
+<li>2.7 Konveksi</li>
+</ul></li>
+<li><strong>BAB III ANALISIS DAN PERANCANGAN</strong>
+<ul>
+<li>3.1 Analisis Kebutuhan</li>
+<li>3.2 Use Case Diagram</li>
+<li>3.3 Flowchart Sistem</li>
+<li>3.4 Entity Relationship Diagram (ERD)</li>
+<li>3.5 Struktur Tabel Database</li>
+<li>3.6 Struktur Folder Project</li>
+</ul></li>
+<li><strong>BAB IV IMPLEMENTASI DAN PENGUJIAN</strong>
+<ul>
+<li>4.1 Spesifikasi Sistem</li>
+<li>4.2 Instalasi</li>
+<li>4.3 Hasil Implementasi (Customer)</li>
+<li>4.4 Hasil Implementasi (Admin)</li>
+<li>4.5 Pengujian (Black Box Testing)</li>
+</ul></li>
+<li><strong>BAB V PENUTUP</strong>
+<ul>
+<li>5.1 Kesimpulan</li>
+<li>5.2 Saran</li>
+</ul></li>
+<li>DAFTAR PUSTAKA</li>
+<li>LAMPIRAN</li>
+</ul>
+<h1 id="bab-i">BAB I</h1>
+<h1 id="pendahuluan">PENDAHULUAN</h1>
+<h2 id="latar-belakang">1.1 Latar Belakang</h2>
+<p>Indra Konveksi merupakan usaha konveksi &amp; sablon yang berlokasi
+di Bengkulu yang melayani pembuatan berbagai produk seperti seragam
+sekolah (TK, SD, SMP, SMA), almamater, jaket, kaos, topi, ID card,
+lanyard, batik, hingga seragam dinas TNI/POLRI. Selama ini, proses
+pemesanan dilakukan secara konvensional melalui WhatsApp, telepon, atau
+datang langsung ke tempat, sehingga calon pelanggan kesulitan melihat
+katalog produk secara menyeluruh, membandingkan harga, dan melakukan
+pemesanan custom dengan detail yang tepat.</p>
+<p>Di era digital saat ini, kehadiran sebuah website resmi menjadi
+kebutuhan strategis bagi pelaku UMKM agar dapat menjangkau pasar yang
+lebih luas dan meningkatkan profesionalitas usaha. Dengan adanya website
+katalog produk yang dilengkapi fitur custom order, pelanggan dapat
+dengan mudah mengakses informasi produk 24 jam, melakukan pemesanan
+sesuai keinginan, dan menerima notifikasi langsung melalui WhatsApp.</p>
+<p>Berdasarkan latar belakang tersebut, dibutuhkan sebuah
+<strong>Website Katalog &amp; Custom Order</strong> untuk Indra Konveksi
+yang dibangun menggunakan bahasa pemrograman <strong>PHP</strong> dengan
+basis data <strong>MySQL</strong> dan framework tampilan
+<strong>Bootstrap 5</strong>.</p>
+<h2 id="rumusan-masalah">1.2 Rumusan Masalah</h2>
+<ol type="1">
+<li>Bagaimana merancang dan membangun website katalog produk konveksi
+yang informatif dan mudah digunakan oleh pelanggan?</li>
+<li>Bagaimana mengimplementasikan fitur custom order yang dapat menerima
+detail pesanan (bahan, ukuran, warna, jumlah) beserta upload desain dari
+pelanggan?</li>
+<li>Bagaimana membangun panel admin yang dapat mengelola kategori,
+produk, pesanan, dan pelanggan?</li>
+<li>Bagaimana menghubungkan website dengan WhatsApp admin untuk
+konfirmasi pesanan secara otomatis?</li>
+</ol>
+<h2 id="tujuan">1.3 Tujuan</h2>
+<p>Tujuan dari project ini adalah:</p>
+<ol type="1">
+<li>Membuat website katalog produk Indra Konveksi yang dapat diakses
+publik.</li>
+<li>Mengimplementasikan fitur registrasi &amp; login pelanggan.</li>
+<li>Membuat fitur custom order beserta upload desain.</li>
+<li>Membuat panel admin lengkap untuk pengelolaan website (CRUD produk,
+kategori, pesanan, customer).</li>
+<li>Mengintegrasikan website dengan WhatsApp untuk komunikasi cepat
+antara customer dan admin.</li>
+<li>Menyediakan fitur cetak struk pesanan sebagai bukti.</li>
+</ol>
+<h2 id="manfaat">1.4 Manfaat</h2>
+<p><strong>Bagi Pelanggan:</strong> - Dapat melihat katalog lengkap
+produk secara online kapan saja. - Dapat melakukan pemesanan custom
+dengan mudah. - Mendapat struk pesanan otomatis.</p>
+<p><strong>Bagi Pemilik Usaha (Indra Konveksi):</strong> - Meningkatkan
+jangkauan pasar. - Pengelolaan data pesanan, produk, dan pelanggan
+terpusat dalam satu sistem. - Meningkatkan profesionalitas usaha. -
+Memudahkan dokumentasi pesanan (struk cetak).</p>
+<p><strong>Bagi Penyusun:</strong> - Sebagai sarana penerapan ilmu
+pemrograman web. - Menambah pengalaman dalam pengembangan aplikasi
+full-stack.</p>
+<h2 id="batasan-masalah">1.5 Batasan Masalah</h2>
+<ol type="1">
+<li>Sistem dibangun menggunakan PHP Native (PDO MySQL) tanpa framework
+PHP (seperti Laravel/CodeIgniter).</li>
+<li>Tampilan menggunakan Bootstrap 5 dan Bootstrap Icons.</li>
+<li>Sistem dijalankan secara lokal menggunakan XAMPP, tetapi siap
+di-deploy ke hosting.</li>
+<li>Fitur email (lupa password, notifikasi) memerlukan konfigurasi SMTP
+(Gmail / Mailtrap / SendGrid).</li>
+<li>Fitur notifikasi WhatsApp otomatis ke admin memerlukan registrasi di
+provider Fonnte atau Wablas.</li>
+<li>Fitur login dengan Google memerlukan registrasi OAuth Client ID di
+Google Cloud Console.</li>
+<li>Pembayaran tidak terintegrasi secara digital — dilakukan secara
+manual via WhatsApp.</li>
+</ol>
+<h1 id="bab-ii">BAB II</h1>
+<h1 id="landasan-teori">LANDASAN TEORI</h1>
+<h2 id="website">2.1 Website</h2>
+<p>Website adalah kumpulan halaman web yang saling terhubung satu sama
+lain dan dapat diakses melalui jaringan internet. Website terdiri dari
+halaman-halaman yang berisi teks, gambar, video, audio, dan elemen
+interaktif lainnya.</p>
+<h2 id="php-hypertext-preprocessor">2.2 PHP (Hypertext
+Preprocessor)</h2>
+<p>PHP adalah bahasa pemrograman server-side yang banyak digunakan untuk
+membuat website dinamis. PHP dapat berinteraksi langsung dengan database
+(seperti MySQL) untuk menyimpan, membaca, mengubah, dan menghapus data.
+Pada project ini digunakan PHP versi 8.x dengan ekstensi PDO (PHP Data
+Objects) untuk koneksi database yang lebih aman dari SQL Injection.</p>
+<h2 id="mysql">2.3 MySQL</h2>
+<p>MySQL adalah sistem manajemen basis data relasional (RDBMS) open
+source yang menggunakan bahasa SQL (Structured Query Language) untuk
+mengelola data. Pada project ini, MySQL digunakan untuk menyimpan data
+admin, customer, kategori, produk, pesanan, dan pengaturan situs.</p>
+<h2 id="html-css-dan-javascript">2.4 HTML, CSS, dan JavaScript</h2>
+<ul>
+<li><strong>HTML (HyperText Markup Language)</strong> — bahasa markup
+untuk membuat struktur halaman web.</li>
+<li><strong>CSS (Cascading Style Sheets)</strong> — bahasa untuk
+mengatur tampilan visual (warna, ukuran, layout) halaman web.</li>
+<li><strong>JavaScript</strong> — bahasa pemrograman client-side yang
+memberikan interaksi pada halaman web (animasi, validasi form, AJAX,
+dll).</li>
+</ul>
+<h2 id="bootstrap-5">2.5 Bootstrap 5</h2>
+<p>Bootstrap adalah framework front-end open source yang menyediakan
+komponen UI siap pakai (grid system, button, form, modal, carousel, dsb)
+untuk mempercepat pengembangan website yang responsive. Versi yang
+digunakan adalah Bootstrap 5.3.2 (load via CDN).</p>
+<h2 id="xampp">2.6 XAMPP</h2>
+<p>XAMPP adalah perangkat lunak gratis yang menyediakan paket lengkap
+untuk pengembangan web di lokal komputer, terdiri dari: -
+<strong>A</strong> = Apache (web server) - <strong>M</strong> =
+MySQL/MariaDB (database) - <strong>P</strong> = PHP (bahasa pemrograman)
+- <strong>P</strong> = Perl</p>
+<h2 id="konveksi">2.7 Konveksi</h2>
+<p>Konveksi adalah industri pembuatan pakaian jadi dalam jumlah banyak
+dengan ukuran standar. Pesanan custom di konveksi biasanya meliputi
+pemilihan bahan kain, ukuran, warna, dan desain (sablon/bordir) sesuai
+keinginan pemesan.</p>
+<h2 id="keamanan-web-web-security">2.8 Keamanan Web (Web Security)</h2>
+<p>Beberapa standar keamanan yang diimplementasikan di project ini:</p>
+<ul>
+<li><strong>CSRF (Cross-Site Request Forgery)</strong> — serangan yang
+membuat user terkena trick untuk mengirim request ke website yang sudah
+login. Diatasi dengan token unik di setiap form.</li>
+<li><strong>Brute-Force Attack</strong> — serangan yang mencoba banyak
+kombinasi password. Diatasi dengan rate limiting (blokir IP setelah N
+percobaan gagal).</li>
+<li><strong>Security Headers HTTP</strong> — header seperti
+<code>X-Frame-Options</code> (anti clickjacking),
+<code>X-Content-Type-Options</code> (anti MIME-sniffing), dan
+<code>Content-Security-Policy</code> (anti XSS).</li>
+<li><strong>Password Hashing</strong> — password disimpan dalam bentuk
+hash bcrypt (irreversible), bukan plaintext.</li>
+</ul>
+<h2 id="oauth-2.0-google-sign-in">2.9 OAuth 2.0 (Google Sign-In)</h2>
+<p>OAuth 2.0 adalah protokol otorisasi terbuka yang memungkinkan user
+login ke aplikasi pihak ketiga menggunakan akun Google tanpa membagikan
+password. Aplikasi menerima <code>id_token</code> dan
+<code>access_token</code> setelah user setuju memberikan akses.</p>
+<h2 id="smtp-phpmailer">2.10 SMTP &amp; PHPMailer</h2>
+<p>SMTP (Simple Mail Transfer Protocol) adalah protokol pengiriman
+email. PHPMailer adalah library populer untuk mengirim email via SMTP
+dari PHP. Project ini menggunakan implementasi SMTP class yang
+<strong>kompatibel dengan PHPMailer</strong> namun lebih ringan (~150
+baris kode) tanpa memerlukan Composer.</p>
+<h2 id="whatsapp-business-api-fonnte-wablas">2.11 WhatsApp Business API
+(Fonnte / Wablas)</h2>
+<p>Fonnte dan Wablas adalah penyedia layanan WhatsApp Business API tidak
+resmi yang populer di Indonesia. Mereka menyediakan endpoint REST API
+untuk mengirim pesan WhatsApp otomatis dari aplikasi (cocok untuk
+notifikasi order, OTP, dll).</p>
+<h1 id="bab-iii">BAB III</h1>
+<h1 id="analisis-dan-perancangan">ANALISIS DAN PERANCANGAN</h1>
+<h2 id="analisis-kebutuhan">3.1 Analisis Kebutuhan</h2>
+<h3 id="kebutuhan-fungsional">3.1.1 Kebutuhan Fungsional</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aktor</th>
+<th>Kebutuhan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Pengunjung</strong></td>
+<td>Melihat beranda dengan slider promosi (carousel), browsing katalog,
+melihat detail produk dengan galeri multi-gambar, melihat halaman
+Tentang &amp; Kontak</td>
+</tr>
+<tr class="even">
+<td><strong>Customer (registered)</strong></td>
+<td>Register / login (manual atau via <strong>Google OAuth</strong>),
+edit profil, custom order produk dengan <strong>detail ukuran per size
+(S/M/L/XL/XXL/XXXL)</strong> + upload desain, lihat riwayat pesanan,
+<strong>lupa password via email reset link</strong>, kirim struk ke
+WhatsApp admin</td>
+</tr>
+<tr class="odd">
+<td><strong>Admin</strong></td>
+<td>Login admin (terproteksi rate-limit), lihat dashboard statistik,
+kelola kategori, kelola produk (dengan <strong>multi-image
+gallery</strong>), kelola pesanan (search &amp; filter), update status
+pesanan, <strong>export pesanan ke Excel CSV</strong>, <strong>print
+struk pesanan</strong>, chat customer via WhatsApp dengan struk lengkap,
+kelola customer, kelola pengaturan situs, <strong>ganti password
+sendiri</strong>, <strong>backup database (format SQL &amp; Excel
+multi-sheet)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="kebutuhan-non-fungsional">3.1.2 Kebutuhan Non-Fungsional</h3>
+<ul>
+<li><strong>Usability</strong> — antarmuka responsive (mobile &amp;
+desktop friendly).</li>
+<li><strong>Security</strong> — password di-hash bcrypt, query dengan
+PDO Prepared Statement, <strong>CSRF token di semua form</strong>,
+<strong>rate limit 5 percobaan gagal per 15 menit</strong>,
+<strong>security headers HTTP</strong> (X-Frame-Options, CSP, dll).</li>
+<li><strong>Reliability</strong> — fitur <strong>backup database
+otomatis harian</strong> (dengan dual format: <strong>SQL</strong> untuk
+restore via phpMyAdmin &amp; <strong>Excel multi-sheet</strong> untuk
+laporan/arsip), log percobaan login.</li>
+<li><strong>Maintainability</strong> — kode terstruktur (folder
+<code>config</code>, <code>includes</code>, <code>admin</code>,
+<code>assets</code>), konfigurasi terpusat (Google OAuth, SMTP, WA API)
+di folder <code>config/</code>.</li>
+<li><strong>Integration</strong> — Google OAuth (login sosial), SMTP
+(email reset password), Fonnte/Wablas (notifikasi WA otomatis).</li>
+</ul>
+<h2 id="use-case-diagram">3.2 Use Case Diagram</h2>
+<pre><code>                     ┌────────────────────────────────┐
+                     │     WEBSITE INDRA KONVEKSI     │
+                     │                                │
+                     │  ◯ Lihat Beranda + Carousel    │
+                     │  ◯ Browse Katalog              │
+   Pengunjung ──────▶│  ◯ Lihat Detail Produk        │
+                     │  ◯ Lihat Tentang &amp; Kontak     │
+                     │                                │
+                     │  ◯ Register Akun               │
+   Customer ────────▶│  ◯ Login / Logout             │
+                     │  ◯ Custom Order (+ upload)    │
+                     │  ◯ Lihat Pesanan Saya         │
+                     │  ◯ Kirim Struk ke Admin (WA)  │
+                     │  ◯ Edit Profil                │
+                     │                                │
+                     │  ◯ Login Admin                 │
+                     │  ◯ Dashboard Statistik         │
+                     │  ◯ Kelola Kategori (CRUD)     │
+   Admin ───────────▶│  ◯ Kelola Produk (CRUD)       │
+                     │  ◯ Cari &amp; Kelola Pesanan      │
+                     │  ◯ Update Status Pesanan      │
+                     │  ◯ Cetak / Print Struk        │
+                     │  ◯ Chat Customer via WA       │
+                     │  ◯ Kelola Customer             │
+                     │  ◯ Pengaturan Situs            │
+                     └────────────────────────────────┘</code></pre>
+<h2 id="flowchart-pemesanan-custom-order">3.3 Flowchart Pemesanan
+(Custom Order)</h2>
+<pre><code>        ┌─────────┐
+        │  MULAI  │
+        └────┬────┘
+             ▼
+   ┌──────────────────┐
+   │ Customer browse  │
+   │   Katalog Produk │
+   └────────┬─────────┘
+            ▼
+   ┌──────────────────┐
+   │  Pilih Produk    │
+   │  &amp; klik Order    │
+   └────────┬─────────┘
+            ▼
+   ┌──────────────────┐         ┌──────────────┐
+   │   Sudah login?   │── NO ──▶│  Login /     │
+   └──────┬───────────┘         │  Register    │
+          │ YES                  └──────┬───────┘
+          ▼                             │
+   ┌──────────────────┐ ◀────────────────┘
+   │  Isi form custom │
+   │  order + upload  │
+   └────────┬─────────┘
+            ▼
+   ┌──────────────────┐
+   │  Sistem simpan   │
+   │  ke DB pesanan   │
+   │  + generate kode │
+   └────────┬─────────┘
+            ▼
+   ┌──────────────────┐
+   │  Sistem buatkan  │
+   │  struk WhatsApp  │
+   │  pre-filled      │
+   └────────┬─────────┘
+            ▼
+   ┌──────────────────┐
+   │  Customer kirim  │
+   │  struk via WA    │
+   │  ke admin        │
+   └────────┬─────────┘
+            ▼
+   ┌──────────────────┐
+   │  Admin konfirmasi│
+   │  &amp; update status │
+   └────────┬─────────┘
+            ▼
+        ┌─────────┐
+        │ SELESAI │
+        └─────────┘</code></pre>
+<h2 id="entity-relationship-diagram-erd">3.4 Entity Relationship Diagram
+(ERD)</h2>
+<p>Database <code>indra_konveksi</code> terdiri dari <strong>9
+tabel</strong> dengan relasi antar entitas sebagai berikut:</p>
+<pre><code>┌─────────────┐        ┌─────────────┐        ┌─────────────────┐
+│   admin     │        │  kategori   │        │     produk      │
+├─────────────┤        ├─────────────┤        ├─────────────────┤
+│ id (PK)     │        │ id (PK)     │◀──┐    │ id (PK)         │
+│ username    │        │ nama        │   │    │ id_kategori (FK)├──┐
+│ password    │        │ slug        │   └────│ nama            │  │
+│ nama        │        │ deskripsi   │        │ bahan           │  │
+│ created_at  │        │ created_at  │        │ harga_min       │  │
+└─────────────┘        └─────────────┘        │ harga_max       │  │
+                                              │ satuan          │  │
+                                              │ deskripsi       │  │
+                                              │ gambar          │  │
+                                              │ stok            │  │
+                                              └────────┬────────┘  │
+                                                       │           │
+                                                       │ 1..N      │
+                                                       ▼           │
+                                        ┌─────────────────────────┐│
+                                        │     produk_gambar       ││
+                                        ├─────────────────────────┤│
+                                        │ id (PK)                 ││
+                                        │ id_produk (FK) CASCADE  ││
+                                        │ gambar                  ││
+                                        │ urutan                  ││
+                                        └─────────────────────────┘│
+                                                                   │
+┌─────────────────┐                                                │
+│      users      │       ┌─────────────────────────┐              │
+├─────────────────┤       │       pesanan           │              │
+│ id (PK)         │◀──┐   ├─────────────────────────┤              │
+│ nama            │   │   │ id (PK)                 │              │
+│ email (UNIQUE)  │   │   │ kode (UNIQUE)           │              │
+│ password (NULL) │   └───│ id_user (FK)            │              │
+│ no_hp           │       │ id_produk (FK) ─────────┼──────────────┘
+│ alamat          │       │ jumlah                  │
+│ google_id       │       │ bahan, ukuran, warna    │
+│ created_at      │       │ catatan, file_desain    │
+└────────┬────────┘       │ total_harga             │
+         │                │ status (ENUM)           │
+         │ 1..N           │ created_at              │
+         ▼                └─────────────────────────┘
+┌─────────────────────┐
+│   reset_token       │       ┌─────────────────────────┐
+├─────────────────────┤       │     login_attempts      │
+│ id (PK)             │       ├─────────────────────────┤
+│ id_user (FK) CASC   │       │ id (PK)                 │
+│ token (UNIQUE)      │       │ ip                      │
+│ expires_at          │       │ type (ENUM admin/user)  │
+│ used                │       │ success                 │
+│ created_at          │       │ attempted_at            │
+└─────────────────────┘       └─────────────────────────┘
+                              (Standalone — log audit trail,
+                               tidak relasi FK ke tabel lain)
+
+┌─────────────────┐
+│   pengaturan    │   (Singleton — 1 baris saja, config global situs)
+├─────────────────┤
+│ id (PK)         │
+│ nama_situs      │
+│ wa_admin        │
+│ email_admin     │
+│ alamat          │
+│ tagline         │
+└─────────────────┘</code></pre>
+<h3 id="penjelasan-relasi">Penjelasan Relasi</h3>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 26%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>No</th>
+<th>Relasi</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>kategori</code> → <code>produk</code></td>
+<td><strong>1 : N</strong></td>
+<td>Satu kategori punya banyak produk. FK <code>id_kategori</code> di
+tabel produk.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>produk</code> → <code>produk_gambar</code></td>
+<td><strong>1 : N</strong></td>
+<td>Satu produk punya banyak gambar galeri (max 5 gambar tambahan).
+<code>ON DELETE CASCADE</code>.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>users</code> → <code>pesanan</code></td>
+<td><strong>1 : N</strong></td>
+<td>Satu customer bisa punya banyak pesanan. FK
+<code>id_user</code>.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>produk</code> → <code>pesanan</code></td>
+<td><strong>1 : N</strong></td>
+<td>Satu produk bisa dipesan di banyak pesanan. FK
+<code>id_produk</code>.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>users</code> → <code>reset_token</code></td>
+<td><strong>1 : N</strong></td>
+<td>Satu user bisa punya banyak token reset password (history).
+<code>ON DELETE CASCADE</code>.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>login_attempts</code></td>
+<td><strong>Standalone</strong></td>
+<td>Tabel audit log brute-force. Tidak relasi FK ke tabel lain — sengaja
+agar tetap tersimpan walau user dihapus.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>admin</code></td>
+<td><strong>Standalone</strong></td>
+<td>Tabel admin terpisah dari <code>users</code>. Tidak ada relasi
+langsung ke entitas lain.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>pengaturan</code></td>
+<td><strong>Singleton</strong></td>
+<td>Hanya 1 baris konfigurasi situs (nama, alamat, WA, email
+admin).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="struktur-tabel-database">3.5 Struktur Tabel Database</h2>
+<h3 id="tabel-admin">Tabel <code>admin</code></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>username</td>
+<td>VARCHAR(50) UNIQUE</td>
+<td>Username login</td>
+</tr>
+<tr class="odd">
+<td>password</td>
+<td>VARCHAR(255)</td>
+<td>Password (bcrypt)</td>
+</tr>
+<tr class="even">
+<td>nama</td>
+<td>VARCHAR(100)</td>
+<td>Nama lengkap</td>
+</tr>
+<tr class="odd">
+<td>created_at</td>
+<td>TIMESTAMP</td>
+<td>Tanggal dibuat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-users-customer">Tabel <code>users</code> (customer)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>nama</td>
+<td>VARCHAR(100)</td>
+<td>Nama lengkap</td>
+</tr>
+<tr class="odd">
+<td>email</td>
+<td>VARCHAR(100) UNIQUE</td>
+<td>Email login</td>
+</tr>
+<tr class="even">
+<td>password</td>
+<td>VARCHAR(255) NULL</td>
+<td>Password (bcrypt). Nullable untuk user Google OAuth</td>
+</tr>
+<tr class="odd">
+<td>no_hp</td>
+<td>VARCHAR(20)</td>
+<td>No HP (wajib untuk order)</td>
+</tr>
+<tr class="even">
+<td>alamat</td>
+<td>TEXT</td>
+<td>Alamat (wajib untuk order)</td>
+</tr>
+<tr class="odd">
+<td>google_id</td>
+<td>VARCHAR(100) NULL UNIQUE</td>
+<td>Google account ID (jika login via OAuth)</td>
+</tr>
+<tr class="even">
+<td>created_at</td>
+<td>TIMESTAMP</td>
+<td>Tanggal daftar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-produk_gambar-galeri-multi-image">Tabel
+<code>produk_gambar</code> (galeri multi-image)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>id_produk</td>
+<td>INT FK</td>
+<td>Foreign key ke produk (CASCADE delete)</td>
+</tr>
+<tr class="odd">
+<td>gambar</td>
+<td>VARCHAR(255)</td>
+<td>Nama file gambar</td>
+</tr>
+<tr class="even">
+<td>urutan</td>
+<td>INT</td>
+<td>Urutan tampil di galeri</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-reset_token-fitur-lupa-password">Tabel
+<code>reset_token</code> (fitur lupa password)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>id_user</td>
+<td>INT FK</td>
+<td>Foreign key ke users</td>
+</tr>
+<tr class="odd">
+<td>token</td>
+<td>VARCHAR(100) UNIQUE</td>
+<td>Token random 64-character</td>
+</tr>
+<tr class="even">
+<td>expires_at</td>
+<td>DATETIME</td>
+<td>Waktu kedaluwarsa (1 jam dari issue)</td>
+</tr>
+<tr class="odd">
+<td>used</td>
+<td>TINYINT</td>
+<td>1 jika token sudah dipakai</td>
+</tr>
+<tr class="even">
+<td>created_at</td>
+<td>TIMESTAMP</td>
+<td>Tanggal token dibuat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-login_attempts-rate-limit-anti-brute-force">Tabel
+<code>login_attempts</code> (rate limit anti brute-force)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>ip</td>
+<td>VARCHAR(45)</td>
+<td>IP address pelaku</td>
+</tr>
+<tr class="odd">
+<td>type</td>
+<td>ENUM</td>
+<td>‘admin’ atau ‘user’</td>
+</tr>
+<tr class="even">
+<td>success</td>
+<td>TINYINT</td>
+<td>1 = login berhasil, 0 = gagal</td>
+</tr>
+<tr class="odd">
+<td>attempted_at</td>
+<td>TIMESTAMP</td>
+<td>Waktu percobaan</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-kategori">Tabel <code>kategori</code></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>nama</td>
+<td>VARCHAR(100)</td>
+<td>Nama kategori</td>
+</tr>
+<tr class="odd">
+<td>slug</td>
+<td>VARCHAR(100) UNIQUE</td>
+<td>Slug untuk URL</td>
+</tr>
+<tr class="even">
+<td>deskripsi</td>
+<td>TEXT</td>
+<td>Deskripsi kategori</td>
+</tr>
+<tr class="odd">
+<td>created_at</td>
+<td>TIMESTAMP</td>
+<td>Tanggal dibuat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-produk">Tabel <code>produk</code></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>id_kategori</td>
+<td>INT FK</td>
+<td>Foreign key ke kategori</td>
+</tr>
+<tr class="odd">
+<td>nama</td>
+<td>VARCHAR(200)</td>
+<td>Nama produk</td>
+</tr>
+<tr class="even">
+<td>bahan</td>
+<td>VARCHAR(100)</td>
+<td>Jenis bahan</td>
+</tr>
+<tr class="odd">
+<td>harga_min</td>
+<td>INT</td>
+<td>Harga minimum (Rp)</td>
+</tr>
+<tr class="even">
+<td>harga_max</td>
+<td>INT NULL</td>
+<td>Harga maximum (range)</td>
+</tr>
+<tr class="odd">
+<td>satuan</td>
+<td>VARCHAR(30)</td>
+<td>pcs / setel / lembar</td>
+</tr>
+<tr class="even">
+<td>deskripsi</td>
+<td>TEXT</td>
+<td>Deskripsi produk</td>
+</tr>
+<tr class="odd">
+<td>keterangan</td>
+<td>TEXT</td>
+<td>Keterangan tambahan</td>
+</tr>
+<tr class="even">
+<td>gambar</td>
+<td>VARCHAR(255)</td>
+<td>Nama file gambar</td>
+</tr>
+<tr class="odd">
+<td>stok_tersedia</td>
+<td>TINYINT</td>
+<td>1=aktif, 0=nonaktif</td>
+</tr>
+<tr class="even">
+<td>created_at</td>
+<td>TIMESTAMP</td>
+<td>Tanggal input</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-pesanan">Tabel <code>pesanan</code></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>kode</td>
+<td>VARCHAR(30) UNIQUE</td>
+<td>Kode pesanan IK-YYYYMMDD-XXXXX</td>
+</tr>
+<tr class="odd">
+<td>id_user</td>
+<td>INT FK</td>
+<td>Foreign key ke users</td>
+</tr>
+<tr class="even">
+<td>id_produk</td>
+<td>INT FK</td>
+<td>Foreign key ke produk</td>
+</tr>
+<tr class="odd">
+<td>jumlah</td>
+<td>INT</td>
+<td>Jumlah pesanan</td>
+</tr>
+<tr class="even">
+<td>bahan</td>
+<td>VARCHAR(100)</td>
+<td>Bahan dipilih</td>
+</tr>
+<tr class="odd">
+<td>ukuran</td>
+<td>VARCHAR(50)</td>
+<td>Ukuran custom</td>
+</tr>
+<tr class="even">
+<td>warna</td>
+<td>VARCHAR(50)</td>
+<td>Warna custom</td>
+</tr>
+<tr class="odd">
+<td>catatan</td>
+<td>TEXT</td>
+<td>Catatan customer</td>
+</tr>
+<tr class="even">
+<td>file_desain</td>
+<td>VARCHAR(255)</td>
+<td>File desain (jika ada)</td>
+</tr>
+<tr class="odd">
+<td>total_harga</td>
+<td>BIGINT</td>
+<td>Total harga (harga × jumlah)</td>
+</tr>
+<tr class="even">
+<td>status</td>
+<td>ENUM</td>
+<td>Baru/Diproses/Selesai/Dibatalkan</td>
+</tr>
+<tr class="odd">
+<td>created_at</td>
+<td>TIMESTAMP</td>
+<td>Tanggal pesan</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabel-pengaturan">Tabel <code>pengaturan</code></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>INT PK AUTO</td>
+<td>Primary key</td>
+</tr>
+<tr class="even">
+<td>nama_situs</td>
+<td>VARCHAR(100)</td>
+<td>Nama toko</td>
+</tr>
+<tr class="odd">
+<td>wa_admin</td>
+<td>VARCHAR(20)</td>
+<td>No WhatsApp admin</td>
+</tr>
+<tr class="even">
+<td>email_admin</td>
+<td>VARCHAR(100)</td>
+<td>Email admin</td>
+</tr>
+<tr class="odd">
+<td>alamat</td>
+<td>TEXT</td>
+<td>Alamat fisik toko</td>
+</tr>
+<tr class="even">
+<td>tagline</td>
+<td>VARCHAR(255)</td>
+<td>Slogan toko</td>
+</tr>
+</tbody>
+</table>
+<h2 id="struktur-folder-project">3.6 Struktur Folder Project</h2>
+<pre><code>indra_konveksi/
+├── admin/                  → Panel admin
+│   ├── includes/           → Header, footer admin
+│   ├── index.php           → Dashboard
+│   ├── login.php           → Login admin
+│   ├── kategori.php        → CRUD kategori
+│   ├── produk.php          → CRUD produk
+│   ├── pesanan.php         → Kelola pesanan + search
+│   ├── struk-print.php     → Cetak struk pesanan
+│   ├── users.php           → Kelola customer
+│   └── pengaturan.php      → Pengaturan situs
+├── assets/
+│   ├── css/style.css       → Stylesheet utama
+│   ├── js/script.js        → JavaScript
+│   └── images/slides/      → Gambar slider beranda
+├── config/
+│   ├── db.php              → Koneksi PDO MySQL
+│   ├── config.php          → Konfigurasi situs
+│   └── slides.php          → Konfigurasi slide carousel
+├── includes/
+│   ├── header.php          → Header customer
+│   ├── footer.php          → Footer customer
+│   ├── auth.php            → Helper auth
+│   └── functions.php       → Helper umum (struk, format, dll)
+├── uploads/                → Upload gambar produk &amp; desain
+├── database.sql            → Skema + Seed data MySQL
+├── index.php               → Beranda + Carousel
+├── katalog.php             → Halaman katalog
+├── produk.php              → Detail produk
+├── custom-order.php        → Form custom order
+├── login.php / register.php → Autentikasi customer
+├── logout.php
+├── profil.php / pesanan-saya.php
+├── tentang.php / kontak.php
+└── README.md</code></pre>
+<h1 id="bab-iv">BAB IV</h1>
+<h1 id="implementasi-dan-pengujian">IMPLEMENTASI DAN PENGUJIAN</h1>
+<h2 id="spesifikasi-sistem">4.1 Spesifikasi Sistem</h2>
+<h3 id="perangkat-keras-minimum">Perangkat Keras (Minimum)</h3>
+<ul>
+<li>Processor: Intel Dual Core / AMD setara</li>
+<li>RAM: 2 GB</li>
+<li>Storage: 1 GB free space</li>
+</ul>
+<h3 id="perangkat-lunak">Perangkat Lunak</h3>
+<ul>
+<li>Sistem Operasi: Windows 10/11, Linux, atau macOS</li>
+<li>Web Server: Apache (dari XAMPP)</li>
+<li>Database: MySQL/MariaDB 5.7+</li>
+<li>PHP: versi 7.4 atau 8.x</li>
+<li>Browser: Chrome, Firefox, Edge (modern browser)</li>
+</ul>
+<h3 id="stack-teknologi">Stack Teknologi</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Teknologi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bahasa Backend</td>
+<td>PHP Native (PDO)</td>
+</tr>
+<tr class="even">
+<td>Database</td>
+<td>MySQL / MariaDB</td>
+</tr>
+<tr class="odd">
+<td>Framework UI</td>
+<td>Bootstrap 5.3.2</td>
+</tr>
+<tr class="even">
+<td>Icon</td>
+<td>Bootstrap Icons</td>
+</tr>
+<tr class="odd">
+<td>Web Server</td>
+<td>Apache</td>
+</tr>
+<tr class="even">
+<td>Tools Development</td>
+<td>XAMPP, phpMyAdmin</td>
+</tr>
+</tbody>
+</table>
+<h2 id="instalasi">4.2 Instalasi</h2>
+<ol type="1">
+<li><strong>Extract</strong> folder <code>indra_konveksi</code> ke
+<code>C:\xampp\htdocs\</code></li>
+<li>Jalankan <strong>Apache + MySQL</strong> di XAMPP Control Panel</li>
+<li>Buka <strong>phpMyAdmin</strong> → buat database
+<code>indra_konveksi</code> → Import <code>database.sql</code></li>
+<li>Akses di browser:
+<ul>
+<li>Customer: <code>http://localhost/indra_konveksi/</code></li>
+<li>Admin:
+<code>http://localhost/indra_konveksi/admin/login.php</code></li>
+</ul></li>
+</ol>
+<h3 id="akun-default">Akun Default</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Username/Email</th>
+<th>Password</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Admin</td>
+<td><code>admin</code></td>
+<td><code>admin123</code></td>
+</tr>
+<tr class="even">
+<td>Customer Demo</td>
+<td><code>customer@demo.com</code></td>
+<td><code>customer123</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hasil-implementasi-sisi-customer">4.3 Hasil Implementasi (Sisi
+Customer)</h2>
+<h3 id="identitas-visual-logo">4.3.0 Identitas Visual (Logo)</h3>
+<p>Website menggunakan <strong>logo resmi Indra Konveksi</strong>
+berbentuk lingkaran berwarna biru putih dengan inisial “IK” sebagai
+identitas brand. Logo ditampilkan di:</p>
+<ul>
+<li><strong>Navbar customer</strong> (kiri atas) – ikon brand di samping
+nama toko.</li>
+<li><strong>Sidebar admin panel</strong> – logo di header sidebar.</li>
+<li><strong>Halaman login customer &amp; admin</strong> – logo besar di
+tengah form login.</li>
+<li><strong>Halaman register &amp; lupa password</strong> – konsistensi
+brand di seluruh halaman auth.</li>
+<li><strong>Halaman Tentang</strong> – logo ditampilkan besar (140px)
+sebagai identitas resmi toko.</li>
+<li><strong>Footer website</strong> – logo bersama nama toko di kolom
+pertama.</li>
+<li><strong>Struk pesanan printable</strong> – logo di header struk
+untuk profesionalisme.</li>
+<li><strong>Favicon browser</strong> – logo tampil di tab browser dan
+saat di-bookmark.</li>
+</ul>
+<p>File logo disimpan di <code>/assets/img/logo.jpg</code> dan diakses
+lewat konstanta <code>LOGO_URL</code> di <code>config/config.php</code>
+agar mudah diganti dari satu tempat saja.</p>
+<h3 id="halaman-beranda">4.3.1 Halaman Beranda</h3>
+<p>Beranda menampilkan <strong>carousel hero promo</strong> dengan
+auto-slide 5 detik, indicators, dan tombol prev/next. Di bawahnya
+terdapat grid kategori produk dan produk unggulan. <em>[Lampirkan
+screenshot beranda di sini]</em></p>
+<h3 id="halaman-katalog">4.3.2 Halaman Katalog</h3>
+<p>Menampilkan seluruh produk dengan filter kategori dan kolom
+pencarian. Setiap kartu produk menampilkan gambar, nama, bahan, harga
+range, dan tombol Detail. <em>[Lampirkan screenshot katalog di
+sini]</em></p>
+<h3 id="halaman-detail-produk">4.3.3 Halaman Detail Produk</h3>
+<p>Menampilkan informasi lengkap produk: gambar, nama, kategori, harga,
+bahan, satuan, deskripsi, dan keterangan tambahan. Tersedia tombol
+<strong>Pesan / Custom Order</strong> dan tombol WhatsApp untuk
+konsultasi. <em>[Lampirkan screenshot detail produk]</em></p>
+<h3 id="halaman-register-login">4.3.4 Halaman Register &amp; Login</h3>
+<p>Form register meminta: nama, email, no HP (wajib), alamat (wajib),
+dan password. Validasi dilakukan baik di sisi client (HTML5 required)
+maupun sisi server (PHP). <em>[Lampirkan screenshot register]</em></p>
+<h3 id="form-custom-order">4.3.5 Form Custom Order</h3>
+<p>Customer dapat memilih produk, mengisi jumlah, bahan, ukuran, warna,
+catatan custom, dan upload file desain (max 5MB). Setelah submit, sistem
+akan menyimpan pesanan dan otomatis membuat <strong>link WhatsApp dengan
+struk pesanan pre-filled</strong>. Pada bagian bawah form ditampilkan
+<strong>info estimasi waktu pengerjaan: 1 bulan (±30 hari
+kerja)</strong> agar customer mengetahui jadwal selesai pesanan sejak
+awal. <em>[Lampirkan screenshot custom order]</em></p>
+<h3 id="halaman-pesanan-saya">4.3.6 Halaman Pesanan Saya</h3>
+<p>Menampilkan riwayat seluruh pesanan customer dengan kolom
+<strong>Estimasi Selesai</strong> (otomatis dihitung = tanggal pesan +
+30 hari) dan tombol “Kirim ke Admin” yang membuka WhatsApp dengan format
+struk lengkap (termasuk tanggal estimasi selesai). <em>[Lampirkan
+screenshot pesanan saya]</em></p>
+<h2 id="hasil-implementasi-sisi-admin">4.4 Hasil Implementasi (Sisi
+Admin)</h2>
+<h3 id="halaman-login-admin">4.4.1 Halaman Login Admin</h3>
+<p>Form login terpisah dari customer dengan URL
+<code>/admin/login.php</code>. <em>[Lampirkan screenshot login
+admin]</em></p>
+<h3 id="dashboard-admin">4.4.2 Dashboard Admin</h3>
+<p>Menampilkan statistik: Total Produk, Total Kategori, Total Customer,
+Total Pesanan, Pesanan Baru, Omzet Selesai. Di bawahnya ditampilkan 5
+pesanan terakhir. <em>[Lampirkan screenshot dashboard]</em></p>
+<h3 id="crud-kategori">4.4.3 CRUD Kategori</h3>
+<p>Admin dapat menambah, mengedit, dan menghapus kategori. Slug URL
+otomatis dibuat dari nama. <em>[Lampirkan screenshot kategori]</em></p>
+<h3 id="crud-produk">4.4.4 CRUD Produk</h3>
+<p>Tabel produk dengan thumbnail. Admin dapat menambah/edit produk
+dengan upload gambar, set harga range, kategori, dan status aktif.
+<em>[Lampirkan screenshot produk]</em></p>
+<h3 id="kelola-pesanan-dengan-search">4.4.5 Kelola Pesanan (dengan
+Search)</h3>
+<p>Tabel pesanan menampilkan: Kode, Tanggal, Customer, Produk, Jumlah,
+Total, Status, dan Aksi. Tersedia <strong>kolom pencarian</strong> yang
+mencari di kode, nama customer, email, nama produk, dan kategori. Filter
+status juga tersedia. <em>[Lampirkan screenshot pesanan +
+search]</em></p>
+<h3 id="detail-pesanan">4.4.6 Detail Pesanan</h3>
+<p>Menampilkan detail lengkap pesanan, data customer, file desain (jika
+ada), dan <strong>preview struk WhatsApp</strong>. Admin dapat: - Update
+status pesanan - <strong>Kirim struk lengkap ke customer via
+WhatsApp</strong> - <strong>Print struk pesanan</strong> (bukti cetak)
+<em>[Lampirkan screenshot detail pesanan]</em></p>
+<h3 id="print-struk">4.4.7 Print Struk</h3>
+<p>Halaman cetak struk dengan format A4-friendly: header toko, no
+pesanan, tanggal, data customer, rincian pesanan (tabel produk), catatan
+custom, total pembayaran (kuning besar), dan kolom tanda tangan pemesan
+&amp; admin. <em>[Lampirkan screenshot struk cetak]</em></p>
+<h3 id="kelola-customer">4.4.8 Kelola Customer</h3>
+<p>Daftar seluruh customer terdaftar dengan jumlah pesanan
+masing-masing. <em>[Lampirkan screenshot customer]</em></p>
+<h3 id="pengaturan-situs">4.4.9 Pengaturan Situs</h3>
+<p>Admin dapat mengubah nama situs, no WhatsApp, email, alamat, dan
+tagline. <em>[Lampirkan screenshot pengaturan]</em></p>
+<h2 id="pengujian-black-box-testing">4.5 Pengujian (Black Box
+Testing)</h2>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 26%" />
+<col style="width: 14%" />
+<col style="width: 24%" />
+<col style="width: 18%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>No</th>
+<th>Skenario Pengujian</th>
+<th>Kasus Uji</th>
+<th>Hasil Diharapkan</th>
+<th>Hasil Aktual</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Akses Beranda</td>
+<td>Buka <code>localhost/indra_konveksi/</code></td>
+<td>Tampil halaman beranda + carousel + kategori + produk</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Register dengan data lengkap</td>
+<td>Isi semua field termasuk no HP &amp; alamat</td>
+<td>Akun berhasil dibuat, redirect ke login</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Register tanpa no HP</td>
+<td>Kosongkan no HP</td>
+<td>Muncul pesan error “wajib diisi”</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Register tanpa alamat</td>
+<td>Kosongkan alamat</td>
+<td>Muncul pesan error “wajib diisi”</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Login customer benar</td>
+<td>customer@demo.com / customer123</td>
+<td>Berhasil login, redirect ke beranda</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Login customer salah</td>
+<td>Password salah</td>
+<td>Muncul pesan error</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Filter katalog by kategori</td>
+<td>Pilih dropdown “Topi”</td>
+<td>Tampil produk kategori Topi saja</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Pencarian katalog</td>
+<td>Ketik “drill”</td>
+<td>Tampil semua produk bahan Drill</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Submit custom order</td>
+<td>Isi form lengkap</td>
+<td>Pesanan tersimpan + redirect dengan link WA</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Upload file desain</td>
+<td>Upload JPG 1MB</td>
+<td>File tersimpan di /uploads/</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Lihat Pesanan Saya</td>
+<td>Klik “Pesanan Saya”</td>
+<td>Tampil riwayat pesanan customer</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Klik tombol WA struk</td>
+<td>Klik “Kirim ke Admin”</td>
+<td>Buka WA dengan struk pre-filled</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Login Admin</td>
+<td>admin / admin123</td>
+<td>Redirect ke dashboard admin</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Tambah kategori</td>
+<td>Isi nama “Test Kategori”</td>
+<td>Kategori bertambah di list</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Tambah produk + gambar</td>
+<td>Isi semua field + upload gambar</td>
+<td>Produk muncul di katalog</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Search pesanan by kode</td>
+<td>Ketik “IK-2026”</td>
+<td>Tampil pesanan dengan kode tsb</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>Search pesanan by customer</td>
+<td>Ketik nama customer</td>
+<td>Tampil pesanan customer tsb</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>Update status pesanan</td>
+<td>Pilih “Diproses” di dropdown</td>
+<td>Status berubah, badge warna update</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>Print struk pesanan</td>
+<td>Klik tombol Print</td>
+<td>Buka tab baru dengan struk siap cetak</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>Kirim struk ke customer</td>
+<td>Klik tombol WA di detail</td>
+<td>Buka WA customer dengan struk</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>Logout</td>
+<td>Klik logout</td>
+<td>Session terhapus, redirect login</td>
+<td>Sesuai</td>
+<td>✓ Valid</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total skenario diuji: 21</strong> · <strong>Berhasil (Valid):
+21</strong> · <strong>Persentase keberhasilan: 100%</strong></p>
+<h1 id="bab-v">BAB V</h1>
+<h1 id="penutup">PENUTUP</h1>
+<h2 id="kesimpulan">5.1 Kesimpulan</h2>
+<p>Berdasarkan hasil perancangan, implementasi, dan pengujian yang telah
+dilakukan, dapat disimpulkan bahwa:</p>
+<ol type="1">
+<li><p><strong>Website Katalog &amp; Custom Order Indra
+Konveksi</strong> berhasil dibangun menggunakan PHP Native (PDO), MySQL,
+dan Bootstrap 5 dengan total <strong>61 produk</strong> dalam <strong>11
+kategori</strong> sesuai katalog asli.</p></li>
+<li><p><strong>Fitur Customer</strong> yang berhasil diimplementasikan:
+registrasi (dengan validasi no HP &amp; alamat wajib), login, browsing
+katalog, filter &amp; pencarian produk, custom order dengan upload
+desain, riwayat pesanan, dan struk WhatsApp otomatis
+pre-filled.</p></li>
+<li><p><strong>Fitur Admin</strong> yang berhasil diimplementasikan:
+dashboard statistik, CRUD kategori dan produk, kelola pesanan dengan
+pencarian multi-field (kode/customer/produk/kategori), update status,
+<strong>print struk pesanan</strong>, <strong>chat customer dengan struk
+lengkap via WhatsApp</strong>, kelola customer, dan pengaturan
+situs.</p></li>
+<li><p>Integrasi WhatsApp berfungsi dengan baik menggunakan link
+<code>wa.me/...</code> dengan teks struk yang otomatis terisi
+(URL-encoded).</p></li>
+<li><p><strong>21 skenario pengujian</strong> (black box) berjalan
+<strong>100% valid</strong>.</p></li>
+</ol>
+<h2 id="saran">5.2 Saran</h2>
+<ol type="1">
+<li><strong>Pengembangan lebih lanjut</strong> dapat menambahkan:
+<ul>
+<li>Integrasi payment gateway (Midtrans, Xendit, dll) untuk pembayaran
+digital.</li>
+<li>Notifikasi WhatsApp otomatis ke admin via WhatsApp Business API
+(Fonnte/Wablas).</li>
+<li>Fitur cetak invoice PDF (selain struk).</li>
+<li>Fitur diskon otomatis berdasarkan quantity (mis: &gt;100 pcs diskon
+5–15 ribu).</li>
+<li>Multi-gambar untuk satu produk (galeri).</li>
+<li>Reset password customer via email.</li>
+</ul></li>
+<li><strong>Untuk production / deploy online</strong>, perlu:
+<ul>
+<li>Hosting dengan SSL (HTTPS).</li>
+<li>Konfigurasi SMTP untuk email yang reliabel (PHPMailer +
+SendGrid/Mailtrap).</li>
+<li>Backup database otomatis (cron job).</li>
+<li>Hardening keamanan tambahan (CSRF token, rate limiting login).</li>
+</ul></li>
+<li><strong>Penyusun menyarankan</strong> kepada pemilik usaha Indra
+Konveksi untuk segera memanfaatkan website ini secara online supaya
+jangkauan pemasaran dapat lebih luas dan profesional.</li>
+</ol>
+<h2 id="daftar-pustaka">DAFTAR PUSTAKA</h2>
+<ol type="1">
+<li>PHP Group. (2026). <em>PHP Manual</em>. Diakses dari
+https://www.php.net/manual/en/</li>
+<li>Oracle Corporation. (2026). <em>MySQL 8.0 Reference Manual</em>.
+Diakses dari https://dev.mysql.com/doc/</li>
+<li>Bootstrap Team. (2026). <em>Bootstrap 5 Documentation</em>. Diakses
+dari https://getbootstrap.com/docs/5.3/</li>
+<li>Apache Friends. (2026). <em>XAMPP Documentation</em>. Diakses dari
+https://www.apachefriends.org/docs/</li>
+<li>Mozilla Developer Network. (2026). <em>Web Docs HTML, CSS,
+JavaScript</em>. Diakses dari https://developer.mozilla.org/</li>
+<li>Indra Konveksi. (2026). <em>Katalog Produk</em>. Bengkulu.</li>
+</ol>
+<h2 id="lampiran">LAMPIRAN</h2>
+<h3 id="lampiran-1-source-code">Lampiran 1: Source Code</h3>
+<p>Seluruh source code tersedia di folder project
+<code>indra_konveksi/</code>.</p>
+<h3 id="lampiran-2-database-sql">Lampiran 2: Database SQL</h3>
+<p>Skrip SQL untuk pembuatan tabel &amp; data awal terdapat di file
+<code>database.sql</code>.</p>
+<h3 id="lampiran-3-screenshot">Lampiran 3: Screenshot</h3>
+<p>Lampirkan screenshot tiap halaman website (beranda, katalog, detail
+produk, register, login, custom order, pesanan saya, dashboard admin,
+kelola produk, kelola pesanan, print struk, dll).</p>
+<h3 id="lampiran-4-tabel-produk-asli-seed">Lampiran 4: Tabel Produk Asli
+(Seed)</h3>
+<p>Total 61 produk awal yang sudah di-seed di database:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kategori</th>
+<th>Jumlah Varian</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Topi</td>
+<td>13 varian (Baseball, Rimba, Trucker, Bludru Dinas)</td>
+</tr>
+<tr class="even">
+<td>ID Card / Member Card</td>
+<td>3 varian</td>
+</tr>
+<tr class="odd">
+<td>Lanyard</td>
+<td>2 varian</td>
+</tr>
+<tr class="even">
+<td>Almamater</td>
+<td>1 varian</td>
+</tr>
+<tr class="odd">
+<td>Rompi / Vest</td>
+<td>7 varian (Dril, American Dril, Micro, Taslan, Ripstop, Nagata,
+Kanvas)</td>
+</tr>
+<tr class="even">
+<td>Kaos</td>
+<td>9 varian (Cotton Bambo, Combed Terry, 30S, 24S, 20S, Carded, PE
+Double, PE Single, Papa Jeans)</td>
+</tr>
+<tr class="odd">
+<td>Seragam Sekolah TK</td>
+<td>3 varian</td>
+</tr>
+<tr class="even">
+<td>Seragam Sekolah SD/MI</td>
+<td>6 varian</td>
+</tr>
+<tr class="odd">
+<td>Seragam Sekolah SMP/MTS</td>
+<td>5 varian</td>
+</tr>
+<tr class="even">
+<td>Seragam Sekolah SMA/SMK/MA</td>
+<td>5 varian</td>
+</tr>
+<tr class="odd">
+<td>Jaket</td>
+<td>2 varian (Drill, Katun)</td>
+</tr>
+<tr class="even">
+<td>PDH</td>
+<td>1 varian</td>
+</tr>
+<tr class="odd">
+<td>Batik</td>
+<td>1 varian (Basurek)</td>
+</tr>
+<tr class="even">
+<td>Seragam Dinas / TNI-POLRI</td>
+<td>4 varian (Dinas, TNI/POLRI, Praktek, Selempang)</td>
+</tr>
+<tr class="odd">
+<td><strong>TOTAL</strong></td>
+<td><strong>61 produk</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>—SELESAI—</strong></p>
+</body>
+</html>

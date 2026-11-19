@@ -1,0 +1,74 @@
+# =====================================================
+# .htaccess untuk InfinityFree
+# =====================================================
+
+# Aktifkan error reporting (hapus/comment setelah production)
+# php_flag display_errors On
+
+# Set PHP timezone
+# php_value date.timezone "Asia/Jakarta"
+
+# Proteksi folder config dari akses langsung
+<FilesMatch "^(config|db|security|smtp|google_oauth|wa_api|slides)\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Proteksi folder backups
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Teruskan header Authorization ke PHP (Wajib agar Token API terbaca)
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+    
+    # Blokir akses langsung ke folder config
+    RewriteRule ^config/ - [F,L]
+    
+    # Blokir akses ke file backup
+    RewriteRule ^backups/ - [F,L]
+    
+    # Blokir akses ke file .sql
+    RewriteRule \.sql$ - [F,L]
+    
+    # Force HTTPS (InfinityFree mendukung SSL gratis)
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Caching untuk file statis
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/x-font-woff "access plus 1 month"
+    ExpiresByType application/x-font-woff2 "access plus 1 month"
+</IfModule>
+
+# Kompresi Gzip
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/json
+</IfModule>
+
+# Batasi upload file (InfinityFree max ~10MB)
+# php_value upload_max_filesize 5M
+# php_value post_max_size 8M
+
+# Tingkatkan batas memori
+# php_value memory_limit 128M
+
+# Default charset
+AddDefaultCharset UTF-8
+
+# Blokir directory listing
+Options -Indexes
+
+# Error pages
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
